@@ -180,7 +180,10 @@ namespace Hooking {
 		PS->bHasStartedPlaying = true;
 		PS->OnRep_bHasStartedPlaying();
 
-		return HandleStartingNewPlayerOriginal(Base, NewPlayer);
+		// Aquí podrías agregar lógica adicional para sincronización de datos o notificaciones
+
+		// Llamar al original para asegurar que el juego base pueda realizar su función
+		HandleStartingNewPlayerOriginal(Base, NewPlayer);
 	}
 
 	BYTE* ChangeGameSessionIdHook()
